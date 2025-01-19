@@ -1,0 +1,18 @@
+sources:
+  - name: "employee sources"
+    database: DBT
+    schema: NEW_BRONZE
+    tables:
+      - name: EMPLOYEE
+
+
+models:
+  - name: "city"
+    config:
+      materialized: 'table'
+  - name: "emp"
+    config:
+      materialized: 'view'
+  - name: "manager"
+    config:
+      materialized: 'view'
